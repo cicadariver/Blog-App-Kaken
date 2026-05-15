@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>会員登録</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Log - ブログ管理システム</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="page-title">会員登録</h2>
+
+      <form action="/register" method="post">
+        <div class="form-group">
+          <label for="accountName">アカウント名</label>
+          <input type="text" id="accountName" name="accountName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="accountEmail">メールアドレス</label>
+          <input type="email" id="accountEmail" name="accountEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">パスワード</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">パスワード確認</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+
+        <div class="button-area">
+          <button type="submit" class="btn">登録</button>
+        </div>
+      </form>
+
+      <p class="link-text">
+        すでにアカウントをお持ちの方は
+        <a href="login.html">ログインはこちら</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

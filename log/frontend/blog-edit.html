@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ブログ編集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Log - ブログ管理システム</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="page-title">ブログ編集</h2>
+
+      <form action="/blogs/update" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="blogId" value="1">
+
+        <div class="form-group">
+          <label for="blogTitle">ブログタイトル</label>
+          <input type="text" id="blogTitle" name="blogTitle" value="サンプルタイトル" required>
+        </div>
+
+        <div class="form-group">
+          <label for="categoryName">カテゴリ名</label>
+          <select id="categoryName" name="categoryName" required>
+            <option value="">選択してください</option>
+            <option value="日記" selected>日記</option>
+            <option value="学習">学習</option>
+            <option value="趣味">趣味</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="blogImage">ブログ画像URL</label>
+          <input type="file" id="blogImage" name="blogImage" value="images/sample.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="article">ブログ記事</label>
+          <textarea id="article" name="article" required>これはサンプル記事です。</textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">更新</button>
+          <button type="submit" formaction="/blogs/delete" class="btn btn-danger">削除</button>
+          <a href="login.html" class="btn btn-secondary">戻る</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

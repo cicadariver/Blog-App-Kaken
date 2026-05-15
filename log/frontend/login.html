@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログイン</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Log - ブログ管理システム</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="page-title">ログイン</h2>
+
+      <form action="/login" method="post">
+        <div class="form-group">
+          <label for="accountEmail">メールアドレス</label>
+          <input type="email" id="accountEmail" name="accountEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">パスワード</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="button-area">
+          <button type="submit" class="btn">ログイン</button>
+        </div>
+      </form>
+
+      <p class="link-text">
+        アカウントをお持ちでない方は
+        <a href="register.html">会員登録はこちら</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
