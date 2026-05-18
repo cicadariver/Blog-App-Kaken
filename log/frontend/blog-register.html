@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>ブログ登録</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="header">
     <h1>Log - ブログ管理システム</h1>
@@ -17,7 +19,7 @@
       <form action="/blogs/create" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label for="blogTitle">ブログタイトル</label>
-          <input type="text" id="blogTitle" name="blogTitle" required>
+          <input type="text" id="blogTitle" name="blogTitle" placeholder="タイトルを入力してください" required>
         </div>
 
         <div class="form-group">
@@ -26,27 +28,28 @@
             <option value="">選択してください</option>
             <option value="日記">日記</option>
             <option value="学習">学習</option>
-            <option value="趣味">趣味</option>
             <option value="その他">その他</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="blogImage">ブログ画像URL</label>
-          <input type="file" id="blogImage" name="blogImage" placeholder="例：images/sample.jpg">
+          <label for="blogImage">ブログ画像</label>
+          <input type="file" id="blogImage" name="blogImage" accept="image/*">
+          <p class="help-text">投稿する画像を選択してください。</p>
         </div>
 
         <div class="form-group">
           <label for="article">ブログ記事</label>
-          <textarea id="article" name="article" required></textarea>
+          <textarea id="article" name="article" placeholder="ブログ本文を入力してください" required></textarea>
         </div>
 
         <div class="form-actions">
           <button type="submit" class="btn">登録</button>
-          <a href="login.html" class="btn btn-secondary">戻る</a>
+          <a href="blog-list.html" class="btn btn-secondary">戻る</a>
         </div>
       </form>
     </section>
   </main>
 </body>
+
 </html>
