@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-family: "Yu Gothic", "Meiryo", "Microsoft YaHei", Arial, sans-serif;
   background-color: #b8c0b4;
   color: #1f2421;
 }
@@ -64,6 +64,17 @@ select {
   color: #1f2421;
 }
 
+input:focus,
+textarea:focus,
+select:focus,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #68736a;
+}
+
 textarea {
   height: 220px;
   resize: vertical;
@@ -91,6 +102,12 @@ textarea {
   background-color: #2f4938;
 }
 
+.btn:active {
+  background-color: #2f566f;
+  color: #f4f7f8;
+  transform: translateY(2px);
+}
+
 .btn-danger {
   background-color: #6b2f2f;
   color: #eef0e8;
@@ -100,6 +117,12 @@ textarea {
   background-color: #4f2323;
 }
 
+.btn-danger:active {
+  background-color: #2f566f;
+  color: #f4f7f8;
+  transform: translateY(2px);
+}
+
 .btn-secondary {
   background-color: #5f665f;
   color: #eef0e8;
@@ -107,6 +130,12 @@ textarea {
 
 .btn-secondary:hover {
   background-color: #484f49;
+}
+
+.btn-secondary:active {
+  background-color: #2f566f;
+  color: #f4f7f8;
+  transform: translateY(2px);
 }
 
 .link-text {
